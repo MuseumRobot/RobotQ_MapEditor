@@ -176,6 +176,9 @@
    </property>
   </action>
   <action name="action_run">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="robotqme.qrc">
      <normaloff>:/RobotQME/Resources/run.png</normaloff>:/RobotQME/Resources/run.png</iconset>

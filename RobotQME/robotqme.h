@@ -14,6 +14,7 @@
 #include "DlgNew.h"
 #include "Point.h"
 #include <list>
+#include "AStar.h"
 class RobotQME : public QMainWindow{
 	Q_OBJECT
 
@@ -30,9 +31,7 @@ private:
 	int x0,y0,w0,h0;	//绘图板的位置与大小
 	int m_timerId,m_timerRefreshStatusBar;
 	Map* m_map;
-	PointList* openlist;
-	PointList* closelist;
-	PointList* result;
+	PointList* m_result;
 	QPoint m_mousePos;
 	bool isMousePressed;
 
@@ -53,9 +52,5 @@ private slots:
 	void OnBtnResetFlag();
 	//运行
 	void OnBtnRun();
-
-private:
-
-	Point *isInList(std::list<Point *> &list,const Point *point);	//判断list中是否含有某点
 };
 

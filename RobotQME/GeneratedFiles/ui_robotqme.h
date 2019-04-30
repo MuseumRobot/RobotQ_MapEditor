@@ -93,6 +93,7 @@ public:
         action_setobstacle->setIcon(icon7);
         action_run = new QAction(RobotQMEClass);
         action_run->setObjectName(QString::fromUtf8("action_run"));
+        action_run->setCheckable(true);
         QIcon icon8;
         icon8.addFile(QString::fromUtf8(":/RobotQME/Resources/run.png"), QSize(), QIcon::Normal, QIcon::Off);
         action_run->setIcon(icon8);

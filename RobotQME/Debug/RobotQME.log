@@ -1,4 +1,4 @@
-﻿生成启动时间为 2019/4/30 星期二 下午 4:50:23。
+﻿生成启动时间为 2019/4/30 星期二 下午 9:02:10。
      1>项目“C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\RobotQME.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\RobotQME.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -12,7 +12,7 @@
          所有输出均为最新。
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\\RobotQME.exe" /NOLOGO /LIBPATH:C:\Qt\4.8.6\lib qtmaind.lib QtCored4.lib QtGuid4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\RobotQME.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\RobotQME.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\RobotQME.lib" /MACHINE:X86 Debug\icon.res
-         Debug\DataManager.obj
+         Debug\AStar.obj
          Debug\DlgNew.obj
          Debug\moc_DlgNew.obj
          Debug\moc_robotqme.obj
@@ -30,4 +30,4 @@
 
 生成成功。
 
-已用时间 00:00:04.66
+已用时间 00:00:04.74

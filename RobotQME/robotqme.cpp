@@ -56,7 +56,12 @@ void RobotQME::paintEvent(QPaintEvent *event){
 		if(m_map->x_end>-1&&m_map->y_end>-1){
 			painter.drawImage(QRect(x0+w*m_map->y_end,y0+h*m_map->x_end,w,h),QImage("Resources/end.png"));
 		}
-
+		if(ui.action_run->isChecked()){
+			for(PointList::iterator iter = m_result->begin(); iter!= m_result->end(); iter++){
+				Point* p = *iter;
+				painter.drawImage(QRect(x0+w*p->y,y0+h*p->x,w,h),QImage("Resources/foot.png"));
+			}
+		}
 	}else{
 		//QPixmap bg("Resources/bg.jpg");
 		//painter.drawPixmap(x0,y0,w0,h0,bg);
@@ -209,6 +214,7 @@ void RobotQME::OnBtnSetObstacle(){
 	ui.action_clearterrain->setChecked(false);
 	ui.action_setstart->setChecked(false);
 	ui.action_setend->setChecked(false);
+	ui.action_run->setChecked(false);
 }
 void RobotQME::OnBtnClearObstacle(){
 	ui.action_setobstacle->setChecked(false);
@@ -217,6 +223,7 @@ void RobotQME::OnBtnClearObstacle(){
 	ui.action_clearterrain->setChecked(false);
 	ui.action_setstart->setChecked(false);
 	ui.action_setend->setChecked(false);
+	ui.action_run->setChecked(false);
 }
 void RobotQME::OnBtnSetDesert(){
 	ui.action_setobstacle->setChecked(false);
@@ -225,6 +232,7 @@ void RobotQME::OnBtnSetDesert(){
 	ui.action_clearterrain->setChecked(false);
 	ui.action_setstart->setChecked(false);
 	ui.action_setend->setChecked(false);
+	ui.action_run->setChecked(false);
 }
 void RobotQME::OnBtnSetOcean(){
 	ui.action_setobstacle->setChecked(false);
@@ -233,6 +241,7 @@ void RobotQME::OnBtnSetOcean(){
 	ui.action_clearterrain->setChecked(false);
 	ui.action_setstart->setChecked(false);
 	ui.action_setend->setChecked(false);
+	ui.action_run->setChecked(false);
 }
 void RobotQME::OnBtnClearTerrian(){
 	ui.action_setobstacle->setChecked(false);
@@ -241,6 +250,7 @@ void RobotQME::OnBtnClearTerrian(){
 	ui.action_setocean->setChecked(false);
 	ui.action_setstart->setChecked(false);
 	ui.action_setend->setChecked(false);
+	ui.action_run->setChecked(false);
 }
 void RobotQME::OnBtnSetStart(){
 	ui.action_setobstacle->setChecked(false);
@@ -249,6 +259,7 @@ void RobotQME::OnBtnSetStart(){
 	ui.action_setocean->setChecked(false);
 	ui.action_clearterrain->setChecked(false);
 	ui.action_setend->setChecked(false);
+	ui.action_run->setChecked(false);
 }
 void RobotQME::OnBtnSetEnd(){
 	ui.action_setobstacle->setChecked(false);
@@ -257,6 +268,7 @@ void RobotQME::OnBtnSetEnd(){
 	ui.action_setocean->setChecked(false);
 	ui.action_clearterrain->setChecked(false);
 	ui.action_setstart->setChecked(false);
+	ui.action_run->setChecked(false);
 }
 void RobotQME::OnBtnResetFlag(){
 	if(m_map != NULL){
@@ -264,11 +276,23 @@ void RobotQME::OnBtnResetFlag(){
 	}
 }
 void RobotQME::OnBtnRun(){
-
-}
-Point* RobotQME::isInList(std::list<Point *> &plist,const Point *point){
-	for(std::list<Point*>::iterator iter = plist.begin(); iter != plist.end(); iter++) 
-		if((*iter)->x==point->x&&(*iter)->y==point->y) 
-			return *iter; 
-	return NULL;  
+	if(ui.action_run->isChecked()){
+		if(m_map->x_start>-1 && m_map->y_start>-1 && m_map->x_end>-1 && m_map->y_end>-1){
+			ui.action_setobstacle->setChecked(false);
+			ui.action_clearobstacle->setChecked(false);
+			ui.action_setdesert->setChecked(false);
+			ui.action_setocean->setChecked(false);
+			ui.action_clearterrain->setChecked(false);
+			ui.action_setstart->setChecked(false);
+			ui.action_setend->setChecked(false);
+			AStar a;
+			a.Init(m_map);
+			a.Calculate(true);
+			m_result = a.GetResultList();
+		}else{
+			QMessageBox msgBox;
+			msgBox.setText(GBK::ToUnicode("尚未设置起止点，无法运行！"));
+			msgBox.exec();
+		}
+	}
 }

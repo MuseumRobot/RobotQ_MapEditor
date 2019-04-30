@@ -59,6 +59,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_DlgNew.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="robotqme.h">
@@ -92,6 +95,9 @@
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_DlgNew.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
