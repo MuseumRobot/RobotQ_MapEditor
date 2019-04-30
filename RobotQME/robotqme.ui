@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RobotQMEClass</class>
+ <widget class="QMainWindow" name="RobotQMEClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>502</width>
+    <height>352</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>RobotQME</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_new"/>
+   <addaction name="action_open"/>
+   <addaction name="action_save"/>
+   <addaction name="action_close"/>
+   <addaction name="separator"/>
+   <addaction name="action_setobstacle"/>
+   <addaction name="action_clearobstacle"/>
+   <addaction name="action_setocean"/>
+   <addaction name="action_setdesert"/>
+   <addaction name="action_clearterrain"/>
+   <addaction name="separator"/>
+   <addaction name="action_setstart"/>
+   <addaction name="action_setend"/>
+   <addaction name="action_resetflag"/>
+   <addaction name="action_run"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="action_new">
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/new.png</normaloff>:/RobotQME/Resources/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建</string>
+   </property>
+   <property name="toolTip">
+    <string>新建地图</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/save.png</normaloff>:/RobotQME/Resources/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>保存地图</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/open.png</normaloff>:/RobotQME/Resources/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>打开地图</string>
+   </property>
+  </action>
+  <action name="action_close">
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/close.png</normaloff>:/RobotQME/Resources/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+   <property name="toolTip">
+    <string>关闭地图</string>
+   </property>
+  </action>
+  <action name="action_setstart">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/start.png</normaloff>:/RobotQME/Resources/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置起点</string>
+   </property>
+  </action>
+  <action name="action_setend">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/end.png</normaloff>:/RobotQME/Resources/end.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置终点</string>
+   </property>
+  </action>
+  <action name="action_resetflag">
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/resetflag.png</normaloff>:/RobotQME/Resources/resetflag.png</iconset>
+   </property>
+   <property name="text">
+    <string>重置起止点</string>
+   </property>
+  </action>
+  <action name="action_setobstacle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/obstacle.png</normaloff>:/RobotQME/Resources/obstacle.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置障碍</string>
+   </property>
+  </action>
+  <action name="action_run">
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/run.png</normaloff>:/RobotQME/Resources/run.png</iconset>
+   </property>
+   <property name="text">
+    <string>运行</string>
+   </property>
+  </action>
+  <action name="action_clearobstacle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/removeobstacle.png</normaloff>:/RobotQME/Resources/removeobstacle.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除障碍</string>
+   </property>
+  </action>
+  <action name="action_setocean">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/ocean.png</normaloff>:/RobotQME/Resources/ocean.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置海洋</string>
+   </property>
+  </action>
+  <action name="action_setdesert">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/desert.png</normaloff>:/RobotQME/Resources/desert.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置沙漠</string>
+   </property>
+  </action>
+  <action name="action_clearterrain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="robotqme.qrc">
+     <normaloff>:/RobotQME/Resources/clearterrain.png</normaloff>:/RobotQME/Resources/clearterrain.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除地形</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="robotqme.qrc"/>
+ </resources>
+ <connections/>
+</ui>

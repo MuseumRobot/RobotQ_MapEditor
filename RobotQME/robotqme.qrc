@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="RobotQME">
+    <file>Resources/foot.png</file>
+    <file>Resources/clearterrain.png</file>
+    <file>Resources/desert.png</file>
+    <file>Resources/ocean.png</file>
+    <file>Resources/removeobstacle.png</file>
+    <file>Resources/end.png</file>
+    <file>Resources/obstacle.png</file>
+    <file>Resources/resetflag.png</file>
+    <file>Resources/run.png</file>
+    <file>Resources/start.png</file>
+    <file>Resources/close.png</file>
+    <file>Resources/new.png</file>
+    <file>Resources/open.png</file>
+    <file>Resources/save.png</file>
+  </qresource>
+</RCC>
