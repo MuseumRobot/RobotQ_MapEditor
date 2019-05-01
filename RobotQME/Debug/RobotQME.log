@@ -1,12 +1,12 @@
-﻿生成启动时间为 2019/4/30 星期二 下午 9:02:10。
+﻿生成启动时间为 2019/5/1 星期三 下午 6:25:00。
      1>项目“C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\RobotQME.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
-         正在创建“Debug\RobotQME.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+         正在对“Debug\RobotQME.unsuccessfulbuild”执行 Touch 任务。
        CustomBuild:
          所有输出均为最新。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\4.8.6\include /I.\GeneratedFiles\Debug /IC:\Qt\4.8.6\include\QtCore /IC:\Qt\4.8.6\include\QtGui /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt robotqme.cpp
-         robotqme.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\4.8.6\include /I.\GeneratedFiles\Debug /IC:\Qt\4.8.6\include\QtCore /IC:\Qt\4.8.6\include\QtGui /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AStar.cpp
+         AStar.cpp
          所有输出均为最新。
        ResourceCompile:
          所有输出均为最新。
@@ -30,4 +30,4 @@
 
 生成成功。
 
-已用时间 00:00:04.74
+已用时间 00:00:02.09

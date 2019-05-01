@@ -31,7 +31,7 @@ private:
 	int x0,y0,w0,h0;	//绘图板的位置与大小
 	int m_timerId,m_timerRefreshStatusBar;
 	Map* m_map;
-	PointList* m_result;
+	std::list<Point> m_result;
 	QPoint m_mousePos;
 	bool isMousePressed;
 

@@ -12,8 +12,8 @@ private:
 	PointList closelist;	//已探索列表
 	Point* currentPoint;
 public:
-	PointList* result;		
-	PointList* GetResultList();//返回结果序列
+	std::list<Point> result;		
+	std::list<Point> GetResultList();//返回结果序列
 	void Init(Map* map);
 	void Calculate(bool isIgnoreCornor);
 private:

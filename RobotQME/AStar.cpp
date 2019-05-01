@@ -1,11 +1,10 @@
 #include "AStar.h"
 AStar::AStar(void){
-	result = new PointList;
 	currentPoint = NULL;
 }
 AStar::~AStar(void){}
 
-PointList* AStar::GetResultList(){
+std::list<Point> AStar::GetResultList(){
 	return result;
 }
 void AStar::Init(Map* map){
@@ -54,7 +53,7 @@ void AStar::Calculate(bool isIgnoreCornor){
 		}
 	}
 	while(p != NULL){
-		result->push_front(p);
+		result.push_front(*p);
 		p = p->parent;
 	}
 }

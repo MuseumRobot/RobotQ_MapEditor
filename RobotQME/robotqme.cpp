@@ -57,9 +57,8 @@ void RobotQME::paintEvent(QPaintEvent *event){
 			painter.drawImage(QRect(x0+w*m_map->y_end,y0+h*m_map->x_end,w,h),QImage("Resources/end.png"));
 		}
 		if(ui.action_run->isChecked()){
-			for(PointList::iterator iter = m_result->begin(); iter!= m_result->end(); iter++){
-				Point* p = *iter;
-				painter.drawImage(QRect(x0+w*p->y,y0+h*p->x,w,h),QImage("Resources/foot.png"));
+			for(std::list<Point>::iterator iter = m_result.begin(); iter!= m_result.end(); iter++){
+				painter.drawImage(QRect(x0+w*iter->y,y0+h*iter->x,w,h),QImage("Resources/foot.png"));
 			}
 		}
 	}else{
@@ -181,6 +180,14 @@ void RobotQME::OnBtnOpen(){
 void RobotQME::OnBtnClose(){
 	delete m_map;
 	m_map = NULL;
+	ui.action_setobstacle->setChecked(false);
+	ui.action_clearobstacle->setChecked(false);
+	ui.action_setdesert->setChecked(false);
+	ui.action_setocean->setChecked(false);
+	ui.action_clearterrain->setChecked(false);
+	ui.action_setstart->setChecked(false);
+	ui.action_setend->setChecked(false);
+	ui.action_run->setChecked(false);
 	ui.statusBar->showMessage(GBK::ToUnicode("¾ÍÐ÷"));
 }
 void RobotQME::OnBtnSave(){
