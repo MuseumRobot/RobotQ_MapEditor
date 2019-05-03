@@ -3,7 +3,7 @@
 RobotQME::RobotQME(QWidget *parent, Qt::WFlags flags):QMainWindow(parent, flags){
 	ui.setupUi(this);
 	m_map = NULL;
-	m_timerId = startTimer(200);
+	m_timerId = startTimer(30);
 	m_timerRefreshStatusBar = startTimer(5000);
 	ui.statusBar->showMessage(GBK::ToUnicode("¾ÍÐ÷"));
 	isMousePressed = false;

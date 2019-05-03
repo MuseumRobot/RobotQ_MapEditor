@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+RobotQME/RobotQME.opensdf
+*.tlog
+*.log
+*.pdb
+*.ipch
