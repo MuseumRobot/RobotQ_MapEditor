@@ -40,10 +40,10 @@ void RobotQME::paintEvent(QPaintEvent *event){
 					painter.setBrush(QColor(100,100,100));
 					painter.drawRect(r);
 				}else{	//无障碍
-					if(m_map->m_weight[i][j] == 2){	//水路
+					if(m_map->m_weight[i][j] == WEIGHT_OCEAN){	//水路
 						painter.setBrush(QColor(30,144,255));
 						painter.drawRect(r);
-					}else if(m_map->m_weight[i][j] == 4){	//沙漠
+					}else if(m_map->m_weight[i][j] == WEIGHT_DESERT){	//沙漠
 						painter.setBrush(QColor(255,150,40));
 						painter.drawRect(r);
 					}
@@ -98,10 +98,10 @@ void RobotQME::mouseMoveEvent(QMouseEvent *event){
 					m_map->m_maze[x][y] = 0;
 				}
 				if(ui.action_setdesert->isChecked()){
-					m_map->m_weight[x][y] = 4;
+					m_map->m_weight[x][y] = WEIGHT_DESERT;
 				}
 				if(ui.action_setocean->isChecked()){
-					m_map->m_weight[x][y] = 2;
+					m_map->m_weight[x][y] = WEIGHT_OCEAN;
 				}
 				if(ui.action_clearterrain->isChecked()){
 					m_map->m_weight[x][y] = 0;
@@ -125,10 +125,10 @@ void RobotQME::mousePressEvent(QMouseEvent *event){
 			m_map->m_maze[x][y] = 0;
 		}
 		if(ui.action_setdesert->isChecked()){
-			m_map->m_weight[x][y] = 4;
+			m_map->m_weight[x][y] = WEIGHT_DESERT;
 		}
 		if(ui.action_setocean->isChecked()){
-			m_map->m_weight[x][y] = 2;
+			m_map->m_weight[x][y] = WEIGHT_OCEAN;
 		}
 		if(ui.action_clearterrain->isChecked()){
 			m_map->m_weight[x][y] = 0;

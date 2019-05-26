@@ -15,6 +15,8 @@
 #include "Point.h"
 #include <list>
 #include "AStar.h"
+#define WEIGHT_DESERT 4
+#define WEIGHT_OCEAN 2
 class RobotQME : public QMainWindow{
 	Q_OBJECT
 
