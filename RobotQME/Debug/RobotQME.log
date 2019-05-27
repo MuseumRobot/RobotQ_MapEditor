@@ -1,22 +1,33 @@
-﻿生成启动时间为 2019/5/25 18:24:07。
-     1>项目“C:\Users\Administor\Documents\RobotQ_MapEditor\RobotQME\RobotQME.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2019/5/27 星期一 下午 12:58:31。
+     1>项目“C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\RobotQME.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\RobotQME.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        CustomBuild:
          所有输出均为最新。
        ClCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\4.8.6\include /I.\GeneratedFiles\Debug /IC:\Qt\4.8.6\include\QtCore /IC:\Qt\4.8.6\include\QtGui /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AStar.cpp
+         AStar.cpp
          所有输出均为最新。
        ResourceCompile:
          所有输出均为最新。
        Link:
-         所有输出均为最新。
-         RobotQME.vcxproj -> C:\Users\Administor\Documents\RobotQ_MapEditor\RobotQME\Win32\Debug\RobotQME.exe
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\\RobotQME.exe" /NOLOGO /LIBPATH:C:\Qt\4.8.6\lib qtmaind.lib QtCored4.lib QtGuid4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\RobotQME.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\RobotQME.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\RobotQME.lib" /MACHINE:X86 Debug\icon.res
+         Debug\AStar.obj
+         Debug\DlgNew.obj
+         Debug\moc_DlgNew.obj
+         Debug\moc_robotqme.obj
+         Debug\qrc_robotqme.obj
+         Debug\main.obj
+         Debug\robotqme.obj
+         LINK : 没有找到 C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\\RobotQME.exe 或上一个增量链接没有生成它；正在执行完全链接
+         RobotQME.vcxproj -> C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\RobotQME.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\Win32\Debug\\RobotQME.exe;#1" /manifest Debug\RobotQME.exe.intermediate.manifest
        FinalizeBuildStatus:
          正在删除文件“Debug\RobotQME.unsuccessfulbuild”。
          正在对“Debug\RobotQME.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“C:\Users\Administor\Documents\RobotQ_MapEditor\RobotQME\RobotQME.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“C:\Users\Administrator\我的文档\RobotQ_MapEditor\RobotQME\RobotQME.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.20
+已用时间 00:00:01.91

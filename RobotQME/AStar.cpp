@@ -44,9 +44,9 @@ void AStar::Calculate(bool isIgnoreCornor){
 				}
 			}
 		}
-	}while(!isInList(openlist,&end));
+	}while(!isInList(openlist,&end) && !openlist.empty());
 	//从终点回溯到起点即可得到结果表
-	Point* p;
+	Point* p = NULL;
 	for(PointList::iterator iter = openlist.begin(); iter != openlist.end(); iter++){
 		if((*iter)->x == m_map->x_end && (*iter)->y == m_map->y_end){
 			p = (*iter);
